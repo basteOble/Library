@@ -196,3 +196,9 @@ form div {
 .books-list li > button:last-child, #cancel {
     background-color: var(--danger)
 }
+
+#is-in-library {
+    font-style: italic;
+    color: var(--danger);
+    display: none;
+}

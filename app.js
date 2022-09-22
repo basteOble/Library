@@ -20,9 +20,17 @@ function addBookToLibrary(e) {
   e.preventDefault();
   const myFormData = new FormData(this);
   const value = Object.fromEntries(myFormData.entries());
-  myLibrary.push(value);
-  createBookCard(value);
-  hideForm();
+  const dupWarn = document.querySelector('#is-in-library');
+
+  // Check if user already have this book 
+  if (myLibrary.some((book) => JSON.stringify(book) == JSON.stringify(value))) {
+    dupWarn.style.display = 'block';
+  } else {
+    dupWarn.style.display = 'none';
+    myLibrary.push(value)
+    createBookCard(value);
+    hideForm();
+  }
 };
 
 form.addEventListener('submit', addBookToLibrary);
