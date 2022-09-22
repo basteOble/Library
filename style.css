@@ -1,0 +1,198 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------- */
+
+:root {
+    --dark: #343a40;
+    --light: #f3f4f6;
+    --card-bg: #e1dcc5;
+    --danger: #dc3545;
+    --btn-bg: #0f766e;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --white: #fff;
+    --success: #28a745;
+    --warning: #ffc107;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--light);
+    height: 100vh;
+}
+
+.header-bar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 15px;
+    background-color: var(--white);
+}
+
+.auth-component {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.signup-btn {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--light);
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 40px;
+}
+
+.books-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--card-bg);
+    color: var(--dark);
+    min-height: 250px;
+}
+
+.books-list li button {
+    font-family: inherit;
+    font-weight: inherit;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+.to-read {
+    background-color: var(--primary);
+}
+
+.have-read, form button {
+    background-color: var(--success);
+}
+
+form input {
+    text-indent: 10px;
+    height: 25px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+}
+
+#add-book {
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    width: 260px;
+}
+
+#book-form {
+    position: absolute;
+    background-color: var(--card-bg);
+    transition: 0.3s all ease-in-out;
+}
+
+.popup-form-hide {
+    transform: translateY(120%);
+}
+
+#add-book > div, #book-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#add {
+    cursor: pointer;
+}
+
+#add:active img {
+    background-color: var(--white);
+}
+
+#add img {
+    height: 70px;
+    width: 70px;
+    background-color: var(--light);
+    border-radius: 50%;
+}
+
+.books-list li > button:last-child, #cancel {
+    background-color: var(--danger)
+}
