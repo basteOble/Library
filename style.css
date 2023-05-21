@@ -1,0 +1,228 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------- */
+
+:root {
+    --dark: #343a40;
+    --light: #f3f4f6;
+    --card-bg: #e1dcc5;
+    --danger: #dc3545;
+    --btn-bg: #0f766e;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --white: #fff;
+    --success: #28a745;
+    --warning: #ffc107;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--light);
+    height: 100vh;
+}
+
+.header-bar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 15px;
+    background-color: var(--white);
+}
+
+.auth-component {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.signup-btn {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--light);
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px;
+    min-height: 250px;
+}
+
+main button {
+    height: 40px;
+    width: 100px;
+    font-family: inherit;
+    font-weight: inherit;
+    border-radius: 5px;
+    border: none;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 300px;
+    gap: 20px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.haveRead {
+    background-color: var(--success);
+}
+
+.deleteBook {
+
+    background-color: var(--danger);
+}
+
+.addCard {
+    position: relative;
+    overflow: hidden;
+}
+
+.add, .addForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+    width: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.addForm {
+    transform: translateX(100%);
+}
+
+.hideAdd {
+    transform: translateX(-100%);
+}
+
+.showForm {
+    transform: translateX(0%);
+}
+
+.addForm form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.addForm div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addForm input {
+    text-indent: 10px;
+    height: 25px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.addForm button {
+    font-family: inherit;
+    font-weight: inherit;
+    border: none;
+    border-radius: 5px;
+}
+
+.addForm form button {
+    background-color: var(--success);
+}
+
+.cancelAdd {
+    background-color: var(--danger);
+}
+
+.addButton {
+    border: none;
+    border-radius: 50%;
+    height: max-content;
+    width: max-content;
+    transition: 0.2s ease-in-out;
+}
+
+.addButton:hover {
+    background-color: var(--white);
+}
+
+.valid {
+    outline: 2px solid var(--success);
+}
+
+.invalid {
+    outline: 1px solid var(--danger);
+}
