@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>My Library</title>
+</head>
+
+<body>
+    <header class="header-bar">
+        <div class="logo-component">
+            <a href=""><img src="./assets/odin-logo.svg" alt=""></a>
+        </div>
+        <ul class="auth-component">
+            <li>
+                <a href="">Log In</a>
+            </li>
+            <li>
+                <a class="signup-btn" href="">Sign Up</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="book-card addCard">
+            <div class="add">
+                <p>Add a Book</p>
+                <button class="addButton">
+                    <img src="./assets/add.svg" alt="add">
+                </button>
+            </div>
+            <div class="addForm">
+                <form action="" class="bookForm" method="POST">
+                    <input type="text" name="title" id="title" placeholder="Title">
+                    <input type="text" name="author" id="author" placeholder="Author">
+                    <input type="number" name="pages" id="pages" placeholder="pages">
+                    <div>
+                        <label for="readStat">Have you read it?</label>
+                        <input type="checkbox" name="readStat" id="readStat">
+                    </div>
+                    <button>Submit</button>
+                </form>
+                <button class="cancelAdd">Cancel</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+
