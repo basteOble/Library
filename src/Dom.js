@@ -19,7 +19,7 @@ function createBookCard(book) {
     bookCard.classList.add('book-card');
     bookCard.innerHTML = `
         <p>"${bookData.getTitle()}"</p>
-        <p>By "${bookData.getAuthor()}"</p>
+        <p>By ${bookData.getAuthor()}</p>
         <p>${bookData.getPages()} pages</p>
     `
 
